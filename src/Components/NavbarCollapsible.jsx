@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
   return (
     <nav
-      className={`bg-black text-white fixed inset-x-0 top-0 z-50 overflow-y-auto shadow-lg transition-transform ${
+      className={`bg-zinc-900 text-white fixed inset-x-0 top-0 z-50 overflow-y-auto shadow-lg transition-transform ${
         isOpen ? 'h-screen transform translate-y-0' : 'h-0 transform -translate-y-full'
       }`}
     >

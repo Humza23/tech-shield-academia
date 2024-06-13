@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const NavbarBanner = ({ toggleNavbar }) => {
   return (
-    <nav className="bg-black text-white p-4 flex justify-between items-center">
+    <nav className="bg-zinc-900 text-white p-4 flex justify-between items-center">
       <Link to="/" className="text-xl font-bold">Tech Shield Academia</Link>
       <div className="md:hidden">
         <button
