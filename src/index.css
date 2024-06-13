@@ -1,6 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.oxanium-font {
+  font-family: 'Oxanium', sans-serif;
+}
+
+body {
+  font-family: 'Oxanium', sans-serif;
+}
+
+
 .input-field {
   background-color: #121212;
   color: #bdbcba;

@@ -9,7 +9,7 @@ const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
         isOpen ? 'h-screen transform translate-y-0' : 'h-0 transform -translate-y-full'
       }`}
     >
-      <div className="p-4">
+      <div className="p-4 oxanium-font">
         <div className="flex justify-end">
           <button
             type="button"

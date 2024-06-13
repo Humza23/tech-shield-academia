@@ -20,7 +20,7 @@ function Form() {
       />
       <input
         type="text"
-        placeholder="Occupation"
+        placeholder="Current Occupation"
         className="input-field"
       />
       <button className="btn-submit">Submit</button>
