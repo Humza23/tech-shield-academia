@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 
 const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
   return (
-    <nav className={`bg-black text-white h-screen fixed top-0 right-0 overflow-y-auto z-50 shadow-lg transition-transform ${isOpen ? 'transform translate-x-0' : 'transform translate-x-full'}`}>
+    <nav
+      className={`bg-black text-white fixed inset-x-0 top-0 z-50 overflow-y-auto shadow-lg transition-transform ${
+        isOpen ? 'h-screen transform translate-y-0' : 'h-0 transform -translate-y-full'
+      }`}
+    >
       <div className="p-4">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex justify-end">
           <button
             type="button"
             className="text-white focus:outline-none"
@@ -19,20 +23,22 @@ const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         <div className="mt-4">
-          <div className="flex flex-col">
-            <Link to="/about-us" className="block text-white py-2 px-4 hover:bg-gray-800">About Us</Link>
-            <Link to="/mission" className="block text-white py-2 px-4 hover:bg-gray-800">Mission</Link>
-            <Link to="/contact-us" className="block text-white py-2 px-4 hover:bg-gray-800">Contact Us</Link>
+          <div className="flex flex-col items-center">
+            <h1 className="text-2xl font-bold mb-4">Tech Shield Academia</h1>
+            <Link to="/about-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+              About Us
+            </Link>
+            <Link to="/mission" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+              Mission
+            </Link>
+            <Link to="/contact-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
