@@ -1,11 +1,10 @@
-// NavbarBanner.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavbarBanner = ({ toggleNavbar }) => {
   return (
     <nav className="bg-zinc-900 text-white p-4 flex justify-between items-center">
-      <Link to="/" className="text-xl font-bold">Tech Shield Academia</Link>
+      <Link to="/" className="text-lg font-bold">Tech Shield Academia</Link>
       <div className="md:hidden">
         <button
           type="button"
@@ -29,9 +28,9 @@ const NavbarBanner = ({ toggleNavbar }) => {
         </button>
       </div>
       <div className="hidden md:flex">
-        <Link to="/about-us" className="mx-4">About Us</Link>
-        <Link to="/mission" className="mx-4">Mission</Link>
-        <Link to="/contact-us" className="mx-4">Contact Us</Link>
+        <Link to="/about-us" className="mx-4 text-base">About Us</Link>
+        <Link to="/mission" className="mx-4 text-base">Mission</Link>
+        <Link to="/contact-us" className="mx-4 text-base">Contact Us</Link>
       </div>
     </nav>
   );

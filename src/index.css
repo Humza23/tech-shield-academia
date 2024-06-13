@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.input-field {
+  background-color: #121212;
+  color: #bdbcba;
+  border: 1px solid #616161;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  width: 80%;
+  max-width: 320px; /* Adjust max-width as needed */
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #9ca3af; /* Adjust focus color */
+}
+
+.btn-submit {
+  background-color: #4b5563; /* Matches Tailwind's bg-neutral-600 */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #1f2937; /* Darker shade of neutral color on hover */
+}
