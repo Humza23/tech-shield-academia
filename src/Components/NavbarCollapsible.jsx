@@ -3,6 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
+  const handleLinkClick = () => {
+    toggleNavbar(false); // Close the navbar by setting isOpen to false
+  };
+
   return (
     <nav
       className={`bg-zinc-900 text-white fixed inset-x-0 top-0 z-50 overflow-y-auto shadow-lg transition-transform ${
@@ -29,14 +33,16 @@ const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
         </div>
         <div className="mt-4">
           <div className="flex flex-col items-center">
-            <h1 className="text-2xl font-bold mb-4">Tech Shield Academia</h1>
-            <Link to="/about-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+            <Link to="/" className="text-white text-2xl font-bold mb-4 block w-full text-center" onClick={() => toggleNavbar(false)}>
+              Tech Shield Academia
+            </Link>
+            <Link to="/about-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
               About Us
             </Link>
-            <Link to="/mission" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+            <Link to="/mission" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
               Mission
             </Link>
-            <Link to="/contact-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center">
+            <Link to="/contact-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
               Contact Us
             </Link>
           </div>
