@@ -28,32 +28,21 @@ const Home = () => {
   useEffect(() => {
     const video = videoRef.current;
 
-    const playVideo = () => {
-      if (video) {
+    const handleInteraction = () => {
+      if (video && video.paused) {
         video.play().catch(error => {
-          // Autoplay was prevented
           console.error('Autoplay was prevented:', error);
         });
       }
     };
 
-    const handleInteraction = () => {
-      if (video) {
-        video.removeEventListener('canplay', playVideo);
-        video.removeEventListener('touchstart', handleInteraction);
-        video.removeEventListener('mousedown', handleInteraction);
-      }
-    };
-
     if (video) {
-      video.addEventListener('canplay', playVideo);
       video.addEventListener('touchstart', handleInteraction);
       video.addEventListener('mousedown', handleInteraction);
     }
 
     return () => {
       if (video) {
-        video.removeEventListener('canplay', playVideo);
         video.removeEventListener('touchstart', handleInteraction);
         video.removeEventListener('mousedown', handleInteraction);
       }
