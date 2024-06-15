@@ -69,7 +69,7 @@ const Form = () => {
     <form className="flex flex-col items-center p-4" onSubmit={handleSubmit}>
       <h2 className="text-lg font-semibold mb-2">Take the First Step</h2>
       <p className="text-xs text-center max-w-xs mb-4">
-        Start by requesting more information and connecting directly with your designated admissions contact.
+        Start by requesting more information and connecting directly with a designated admissions contact.
       </p>
 
       <input
