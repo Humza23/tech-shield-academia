@@ -4,8 +4,9 @@ import NavbarBanner from './Components/NavbarBanner';
 import NavbarCollapsible from './Components/NavbarCollapsible';
 import Home from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
-import Mission from './Pages/Mission';
+import MeetTheTeam from './Pages/MeetTheTeam';
 import ContactUs from './Pages/ContactUs';
+import CourseDetails from './Pages/CourseDetails';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,9 @@ const App = () => {
         <div className="p-4">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/course-details" element={<CourseDetails />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/mission" element={<Mission />} />
+            <Route path="/meet-the-team" element={<MeetTheTeam />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>

@@ -27,10 +27,11 @@ const NavbarBanner = ({ toggleNavbar }) => {
           </svg>
         </button>
       </div>
-      <div className="hidden md:flex">
-        <Link to="/about-us" className="mx-4 text-base oxanium-font">About Us</Link>
-        <Link to="/mission" className="mx-4 text-base oxanium-font">Mission</Link>
-        <Link to="/contact-us" className="mx-4 text-base oxanium-font">Contact Us</Link>
+      <div className="hidden md:flex space-x-4">
+        <Link to="/course-details" className="text-base oxanium-font">Course Details</Link>
+        <Link to="/about-us" className="text-base oxanium-font">About Us</Link>
+        <Link to="/meet-the-team" className="text-base oxanium-font">Meet The Team</Link>
+        <Link to="/contact-us" className="text-base oxanium-font">Contact Us</Link>
       </div>
     </nav>
   );

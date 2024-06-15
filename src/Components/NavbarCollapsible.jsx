@@ -36,11 +36,15 @@ const NavbarCollapsible = ({ isOpen, toggleNavbar }) => {
             <Link to="/" className="text-white text-2xl font-bold mb-4 block w-full text-center" onClick={() => toggleNavbar(false)}>
               Tech Shield Academia
             </Link>
+
+            <Link to="/course-details" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
+              Course Details
+            </Link>
             <Link to="/about-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
               About Us
             </Link>
-            <Link to="/mission" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
-              Mission
+            <Link to="/meet-the-team" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
+              Meet The Team
             </Link>
             <Link to="/contact-us" className="text-white py-2 px-4 hover:bg-gray-800 block w-full text-center" onClick={handleLinkClick}>
               Contact Us
