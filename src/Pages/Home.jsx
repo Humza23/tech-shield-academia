@@ -39,6 +39,11 @@ const Home = () => {
         </video>
       </div>
 
+      <div className="text-center text-sm italic mb-2">
+        Empowering careers through IT Audit & Cybersecurity education.
+      </div>
+
+
       {/* Content below the video */}
       <div className="p-4">
         <Form />
