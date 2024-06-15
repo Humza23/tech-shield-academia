@@ -18,8 +18,8 @@ body {
   border-radius: 8px;
   padding: 10px;
   margin: 8px 0;
-  width: 80%;
-  max-width: 320px; /* Adjust max-width as needed */
+  width: 75%;
+  max-width: 280px; /* Adjust max-width as needed */
 }
 
 .input-field:focus {
