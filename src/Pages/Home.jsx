@@ -39,7 +39,7 @@ const Home = () => {
         </video>
       </div>
 
-      <div className="text-center text-xs italic" style={{ fontSize: '0.6rem' }}>
+      <div className="text-center text-xs italic" style={{ fontSize: '0.625rem' }}>
   Empowering careers through IT Audit & Cybersecurity education
 </div>
 
