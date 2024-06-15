@@ -1,12 +1,16 @@
 import React from 'react';
-import Logo from '../assets/logo.png';  // Adjust the path based on your actual file location
 import Form from '../Components/Form';
+import logoVideo from '../assets/logoVideo.mov'
 
 const Home = () => {
   return (
     <div className="p-4">
       <div className="flex justify-center mb-4">
-        <img src={Logo} alt="TechShield Academia Logo" className="w-64 h-auto" /> {/* Adjust width (w-64) as needed */}
+        {/* Displaying the video */}
+        <video autoPlay loop muted className="w-64 h-auto">
+          <source src={logoVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <Form />
     </div>
