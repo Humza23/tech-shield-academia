@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Form from '../Components/Form';
-import logoVideo from '../assets/logoVideo.mov'; // Adjust the path based on your actual file location
+// import logoVideo from '../assets/logoVideo.mov'; // Adjust the path based on your actual file location
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -34,7 +34,7 @@ const Home = () => {
       {/* Video container */}
       <div className="flex justify-center mb-2">
         <video ref={videoRef} autoPlay loop muted playsInline className="w-64 h-auto" controls={false}>
-          <source src={logoVideo} type="video/mp4" />
+          <source src="/logoVideo.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
