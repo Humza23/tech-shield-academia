@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import { IconContext } from 'react-icons';
-import { FaCheckCircle } from 'react-icons/fa';
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { IconContext } from "react-icons";
+import { FaCheckCircle } from "react-icons/fa";
 
-const serviceId = 'service_dcbfvlv';
-const templateId = 'template_z3i7ykj';
-const userId = 'V3zN_CRR1B_PLeUCd';
+const serviceId = "service_dcbfvlv";
+const templateId = "template_z3i7ykj";
+const userId = "V3zN_CRR1B_PLeUCd";
 
 emailjs.init(userId);
 
 const Form = () => {
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [degreeEarned, setDegreeEarned] = useState('');
+  const [degreeEarned, setDegreeEarned] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,34 +29,45 @@ const Form = () => {
         phoneNumber: e.target.phoneNumber.value.trim(),
         occupation: e.target.occupation.value.trim(),
         highestDegreeEarned: degreeEarned,
-        yearEarned: degreeEarned !== 'N/A' ? e.target.yearEarned.value.trim() : 'N/A',
+        yearEarned:
+          degreeEarned !== "N/A" ? e.target.yearEarned.value.trim() : "N/A",
       };
 
       // If degreeEarned is 'N/A', set yearEarned to 'N/A'
-      if (degreeEarned === 'N/A') {
-        formData.yearEarned = 'N/A';
+      if (degreeEarned === "N/A") {
+        formData.yearEarned = "N/A";
       } else {
         // Validate yearEarned if not 'N/A'
         const yearEarned = formData.yearEarned;
-        if (!yearEarned || isNaN(yearEarned) || yearEarned < 1900 || yearEarned > new Date().getFullYear()) {
-          alert('Please enter a valid year for when the degree was earned.');
+        if (
+          !yearEarned ||
+          isNaN(yearEarned) ||
+          yearEarned < 1900 ||
+          yearEarned > new Date().getFullYear()
+        ) {
+          alert("Please enter a valid year for when the degree was earned.");
           return;
         }
       }
 
-      const result = await emailjs.sendForm(serviceId, templateId, e.target, userId);
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        e.target,
+        userId
+      );
       console.log(result.text);
-      setSubmitMessage('Form submitted successfully!');
+      setSubmitMessage("Form submitted successfully!");
       setShowModal(true);
     } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitMessage('Failed to submit form. Please try again later.');
+      console.error("Failed to send email:", error);
+      setSubmitMessage("Failed to submit form. Please try again later.");
     }
 
     e.target.reset();
 
     setTimeout(() => {
-      setSubmitMessage('');
+      setSubmitMessage("");
       setShowModal(false);
     }, 3000);
   };
@@ -67,9 +78,12 @@ const Form = () => {
 
   return (
     <form className="flex flex-col items-center p-4" onSubmit={handleSubmit}>
-      <h2 className="text-lg font-semibold mb-2">Take the First Step</h2>
+      <h2 className="text-lg font-semibold mb-2">
+        October 2024 - Inquiry Form
+      </h2>
       <p className="text-xs text-center max-w-xs mb-4">
-        Start by requesting more information and connecting directly with a designated admissions contact.
+        Start by requesting more information and connecting directly with a
+        designated admissions contact.
       </p>
 
       <input
@@ -119,7 +133,7 @@ const Form = () => {
         <option value="Doctorate">Doctorate</option>
         <option value="Other">Other</option>
       </select>
-      {degreeEarned !== 'N/A' && (
+      {degreeEarned !== "N/A" && (
         <input
           type="text"
           name="yearEarned"
@@ -127,13 +141,17 @@ const Form = () => {
           className="input-field"
         />
       )}
-      <button type="submit" className="btn-submit">Submit</button>
+      <button type="submit" className="btn-submit">
+        Submit
+      </button>
 
       {/* Modal for successful submission */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-filter backdrop-blur-lg">
           <div className="bg-black bg-opacity-70 p-6 rounded-lg text-white flex items-center">
-            <IconContext.Provider value={{ className: 'text-4xl text-green-500 mr-4' }}>
+            <IconContext.Provider
+              value={{ className: "text-4xl text-green-500 mr-4" }}
+            >
               <FaCheckCircle />
             </IconContext.Provider>
             <p className="text-lg">Form submitted successfully!</p>
